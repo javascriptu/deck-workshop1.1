@@ -1,0 +1,271 @@
+@mixin border-radius($r){
+  -webkit-border-radius : $r;
+  -moz-border-radius    : $r;
+  border-radius         : $r;
+}
+
+@mixin rotate($deg){
+  -webkit-transform : rotate($deg);
+  -moz-transform    : rotate($deg);
+  -ms-transform     : rotate($deg);
+  -o-transform      : rotate($deg);
+  transform         : rotate($deg);
+}
+
+@mixin box-shadow($x, $y, $blur, $spread, $color){
+  -webkit-box-shadow : $x $y $blur $spread $color;
+  -moz-box-shadow    : $x $y $blur $spread $color;
+  box-shadow         : $x $y $blur $spread $color;
+}
+
+$headerColor: #15a4d4;
+$textColor: #d9d9d9;
+$darkBackground : url('../../../img/bgDark.jpg');
+$lightBackground : url('../../../img/bglight.jpg');
+
+body {
+  background: $darkBackground;
+}
+
+.dev {
+  border:1px solid red;
+}
+
+.deck-container {
+  font-family : "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size   : 1.75em;
+  color       : $textColor;
+  width       : 1024px;
+  height      : 768px;
+  padding     : 0px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:-384px 0 0 -512px;
+
+  > .slide {
+    padding:0 !important;
+
+    .deck-before, .deck-previous {
+      opacity : 0.4;
+
+      &:not(.deck-child-current) {
+        .deck-before, .deck-previous {
+          opacity : 1;
+        }
+      }
+    }
+
+    .deck-child-current {
+      opacity : 1;
+    }
+  }
+
+  .slide {
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Mate SC', serif;
+    }
+
+    h1 {
+      color : $headerColor;
+    }
+
+    h2 {
+      color         : lighten($headerColor, 10%);
+      border-bottom : 0;
+
+      .cssreflections & {
+        line-height         : 1;
+      }
+    }
+
+    h3 {
+      color : lighten($headerColor,20%);
+    }
+
+    pre {
+      border-color : #cde;
+      background   : $lightBackground;
+      position     : relative;
+      z-index      : auto;
+
+      .borderradius & {
+        @include border-radius(5px);
+      }
+
+    /* http://nicolasgallagher.com/css-drop-shadows-without-images/ */
+      .csstransforms.boxshadow & {
+        > :first-child:before {
+          content    : "";
+          position   : absolute;
+          z-index    : -1;
+          background : $lightBackground;
+          top        : 0;
+          bottom     : 0;
+          left       : 0;
+          right      : 0;
+        }
+
+        &:before, &:after {
+          content   : "";
+          position  : absolute;
+          z-index   : -2;
+          bottom    : 15px;
+          width     : 50%;
+          height    : 20%;
+          max-width : 300px;
+          @include box-shadow(0, 15px, 10px, 0px, rgba(0, 0, 0, 0.7));
+        }
+
+        &:before {
+          left : 10px;
+          @include rotate(-3deg);
+        }
+
+        &:after {
+          right : 10px;
+          @include rotate(3deg);
+        }
+      }
+      code {
+        color : #39404e;
+        .highlight {
+          background:#ff0;
+          @include border-radius(5px);
+          @include box-shadow(1px, 1px, 2px, 0px, #000);
+          padding:0px 6px 2px;
+
+        }
+      }
+    }
+
+    code {
+      color : #a8bed6;
+    }
+
+    blockquote {
+      font-family : Georgia, serif;
+      font-size   : 2em;
+      padding     : 1em 2em .5em 2em;
+      color       : #262626;
+      background  : $lightBackground;
+      position    : relative;
+      border      : 1px solid #cde;
+      z-index     : auto;
+
+      .borderradius & {
+        @include border-radius(5px);
+      }
+
+      .boxshadow & {
+        > :first-child:before {
+          content    : "";
+          position   : absolute;
+          z-index    : -1;
+          background : #fff;
+          top        : 0;
+          bottom     : 0;
+          left       : 0;
+          right      : 0;
+        }
+
+        &:after {
+          content            : "";
+          position           : absolute;
+          z-index            : -2;
+          top                : 10px;
+          bottom             : 10px;
+          left               : 0;
+          right              : 50%;
+          -moz-border-radius : 10px / 100px;
+          border-radius      : 10px / 100px;
+          @include box-shadow(0, 0, 15px, 0px, rgba(0, 0, 0, 0.6));
+        }
+      }
+
+      p {
+        margin : 0;
+      }
+
+      cite {
+        font-size   : .5em;
+        font-style  : normal;
+        font-weight : bold;
+        color       : #7d000b;
+      }
+
+      &:before {
+        content     : "“";
+        position    : absolute;
+        top         : 0;
+        left        : 0;
+        font-size   : 5em;
+        line-height : 1;
+        color       : #86a3a3;
+        z-index     : 1;
+      }
+    }
+
+    ::-moz-selection { background : #91222f; color : #fff; }
+    ::selection { background : #91222f; color : #fff; }
+
+    a {
+      &, &:hover, &:focus, &:active, &:visited {
+        color           : #599;
+        text-decoration : none;
+      }
+
+      &:hover, &:focus {
+        text-decoration : underline;
+      }
+    }
+  }
+
+  .deck-prev-link, .deck-next-link {
+    background : #fff;
+    opacity    : 0.5;
+
+    &, &:hover, &:focus, &:active, &:visited {
+      color : #599;
+    }
+
+    &:hover, &:focus {
+      opacity         : 1;
+      text-decoration : none;
+    }
+  }
+
+  .deck-status {
+    font-size : 0.6666em;
+  }
+
+  &.deck-menu {
+    .slide {
+      background : transparent;
+      @include border-radius(5px);
+
+      .rgba & { background : rgba(0, 0, 0, .1);}
+
+      &.deck-current, .rgba &.deck-current, .no-touch &:hover {
+        background : #fff;
+      }
+    }
+  }
+
+}
+
+h1 {
+  font-size:3em !important;
+  margin-top:-.5em !important;
+}
+
+#title-slide {
+  h2 {
+    position:absolute;
+    top:50%;
+    font-size:1em;
+    text-align: center;
+    width:100%;
+    color:#ccc;
+  }
+}
