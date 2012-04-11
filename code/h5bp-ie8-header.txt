@@ -1,0 +1,13 @@
+<html class="
+  lt-ie9 js no-flexbox no-canvas no-canvastext no-webgl
+  no-touch no-geolocation postmessage no-websqldatabase
+  no-indexeddb hashchange no-history draganddrop no-rgba
+  no-websockets no-hsla no-multiplebgs no-backgroundsize
+  no-borderimage no-borderradius no-boxshadow no-opacity
+  no-textshadow no-cssanimations no-csscolumns fontface
+  no-cssgradients no-cssreflections no-csstransforms
+  no-csstransforms3d no-csstransitions generatedcontent
+  no-video no-audio localstorage sessionstorage no-smil
+  no-inlinesvg no-webworkers no-applicationcache no-svg
+  no-svgclippaths
+" lang="en">

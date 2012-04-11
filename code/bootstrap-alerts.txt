@@ -1,0 +1,4 @@
+<div class="alert alert-success">
+  <h4 class="alert-heading">Success!</h4>
+  You spoony bard!
+</div>

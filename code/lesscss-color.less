@@ -1,0 +1,11 @@
+@color : rgb(120,120,255);
+
+@linkColor : hsl(hue(@color), 50%, 25%);
+
+a {
+  color:@linkColor;
+}
+
+a:visited {
+  color:darken(@linkColor,20%);
+}

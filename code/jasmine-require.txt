@@ -1,0 +1,14 @@
+var sourceFiles = [
+  'math'
+];
+
+var dataFiles = [
+];
+
+var specs = [
+  'spec/math.spec.js'
+];
+
+require(sourceFiles.concat(dataFiles), function() {
+  require(specs, runTests)
+});

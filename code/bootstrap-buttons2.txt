@@ -1,0 +1,2 @@
+<a class="btn btn-info">Info</a>
+<span class="btn btn-success">Success</span>

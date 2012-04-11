@@ -20,8 +20,13 @@
 	
 	<!-- Replace path with correct path to Modernizr file. -->
 	<script src="scripts/modernizr.custom.js"></script>
+  <style>
+    .container, html, body{
+      overflow:hidden !important;
+    }
+  </style>
 </head>
-<body class="deck-container dev">
+<body class="deck-container">
 
 <!-- ---------------------------------------------------------- -->
 <!-- ---------------------------------------------------------- -->
@@ -30,121 +35,909 @@
 
 <section class="slide" id="title-slide">
   <h1><img src="img/JSULogo.png" alt="JavaScript University"></h1>
-  <h2>Open Source Education for an Open Source world</h2>
-</section>
-
-<section class="slide" id="workshop-title">
-  <h1>Workshop Title</h1>
+  <h2>Open Source Education</h2>
 </section>
 
 <section class="slide">
-  <h2>Workshop 1.1</h2>
+  <h2 class="center">Have questions?</h2>
+  <div class="slide">
+    <h2 class="center">cc @javascriptu on twitter</h2>
+    <h2 class="center">or use hashtag #jsu</h2>
+  </div>
+</section>
+
+<section class="slide" id="workshop-title">
+  <h1>Building Our Base</h1>
+</section>
+
+<section class="slide">
+  <h2></h2>
+  <h2 class="center">Our Goal For Workshop 1</h2>
+  <h2 class="center">Establish our baseline</h2>
+  <h4 class="center">Our new normal of easily reusable tools<br>that complement each other.</h4>
+</section>
+
+<section class="slide">
+  <h2></h2>
+  <h3 class="center">Last chance to follow the code</h3>
+  <ul>
+    <li class="slide"><code>git clone git://github.com/javascriptu/workshop-1.1-src.git</code></li>
+    <li class="slide"><code>cd workshop-1.1-src/</code></li>
+    <li class="slide"><code>npm install</code></li>
+    <li class="slide"><code>node fileServer.js</code></li>
+    <li class="slide">Visit http://127.0.0.1:3000/ in your browser</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1><img src="img/node_started.jpg" class="focus-border"></h1>
+</section>
+
+<style>
+  #foundation-links a {
+    font-size:.8em;
+  }
+</style>
+<section class="slide" id="foundation-links">
+  <h2>What are our tools?</h2>
   <ol>
-    <li>
-      <h3>Write Slides using Deck.js</h3>
-      <p>Slide content is simple&nbsp;HTML.</p>
+    <li class="slide">
+      <h3>Google Chrome - <a href="https://www.google.com/chrome">google.com/chrome</a></h3>
     </li>
-    <li>
-      <h3>Choose Themes</h3>
-      <p>One for slide styles and one for deck&nbsp;transitions.</p>
+    <li class="slide">
+      <h3>HTML5 Boilerplate - <a href="http://html5boilerplate.com/">html5boilerplate.com</a></h3>
     </li>
-    <li>
-      <h3>Include Extensions</h3>
-      <p>Add extra functionality to your deck, or leave it stripped&nbsp;down.</p>
+    <li class="slide">
+      <h3>jQuery - <a href="http://jquery.com/">jquery.com</a></h3>
+    </li>
+    <li class="slide">
+      <h3>LESS - <a href="http://lesscss.org/">lesscss.org</a></h3>
+    </li>
+    <li class="slide">
+      <h3>Twitter's Bootstrap - <a href="http://twitter.github.com/bootstrap/">twitter.github.com/bootstrap</a></h3>
+    </li>
+    <li class="slide">
+      <h3>RequireJS - <a href="http://requirejs.org/">requirejs.org</a></h3>
+    </li>
+    <li class="slide">
+      <h3>Jasmine - <a href="http://pivotal.github.com/jasmine/">pivotal.github.com/jasmine</a></h3>
     </li>
   </ol>
 </section>
 
 <section class="slide">
-  <h2>The Markup</h2>
-  <p>Slides are just HTML elements with a class of <code>slide</code>.</p>
-  <pre><code src="code/foo.js" data-highlight="function"></code></pre>
+  <h1>Laying the foundation</h1>
 </section>
 
 <section class="slide">
-  <h2>The Markup</h2>
-  <p>Slides are just HTML elements with a class of <code>slide</code>.</p>
-  <pre><code src="code/foo.js" data-highlight="2:console,4.6:*"></code></pre>
+  <h1><img src="img/h5bp-ss.jpg" class="focus-border"></h1>
 </section>
 
-<section class="slide" id="themes">
-  <h2>Style Themes</h2>
-  <p>Customizes the colors, typography, and layout of slide&nbsp;content.</p>
-  <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/css/style-theme.css&quot;&gt;</code></pre>
-  <h2>Transition Themes</h2>
-  <p>Defines transitions between slides using CSS3 transitions.  Less capable browsers fall back to cutaways. But <strong>you</strong> aren&rsquo;t using <em>those</em> browsers to give your presentations, are&nbsp;you&hellip;</p>
-  <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/css/transition-theme.css&quot;&gt;</code></pre>
+<section class="slide">
+  <h2>HTML5 Boilerplate</h2>
+  <h3 class="slide">Features:</h3>
+    <ul>
+      <li class="slide">
+        <h3>Solid setup</h3>
+        <p>A checklist of things you'll probably need to think about anyway</p>
+      </li>
+      <li class="slide">
+        <h3>jQuery</h3>
+        <p>The one and only.</p>
+      </li>
+      <li class="slide">
+        <h3>Modernizr</h3>
+        <p>Feature detector. HTML5 supporter. Conditional loader.</p>
+      </li>
+      <li class="slide">
+        <h3>Outdated browser assistance</h3>
+        <p>IE class tags. Chrome frame. IE rendering engine tag.</p>
+      </li>
+    </ul>
+  </div>
 </section>
 
-<section class="slide" id="extensions">
-  <h2>Extensions</h2>
-  <p>Core gives you basic slide functionality with left and right arrow navigation, but you may want more. Here are the ones included in this&nbsp;deck:</p>
+<section class="slide">
+  <h1>Why a boilerplate?</h1>
+</section>
 
+<section class="slide">
+  <h2>A Reverse Todo List (A Done List)</h2>
+  <h3 class="slide center">Delete what you don't need.<br>Customize the rest.</h3>
   <ul>
-    <li class="slide" id="extensions-goto">
-      <strong>deck.goto</strong>: Adds a shortcut key to jump to any slide number.  Hit g, type in the slide number, and hit&nbsp;enter.
-    </li>
+    <li class="slide">Include an HTML5 shim? Awesome!</li>
+    <li class="slide">Google Analytics? Definitely!</li>
+    <li class="slide">Chrome frame? Maybe not this time.</li>
+    <li class="slide">Ensure IE Edge or Chrome frame? Oh yeah!</li>
+    <li class="slide">Google Analytics? Check!</li>
+    <li class="slide">IE Tags? Why not?</li>
+  </ul>
+</section>
 
-    <li class="slide" id="extensions-hash">
-      <strong>deck.hash</strong>: Enables internal linking within slides, deep linking to individual slides, and updates the address bar &amp; a permalink anchor with each slide&nbsp;change.
-    </li>
+<section class="slide">
+  <h2>The customized directory</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight=""></code></pre>
+</section>
 
-    <li class="slide" id="extensions-menu">
-      <strong>deck.menu</strong>: Adds a menu view, letting you see all slides in a grid. Hit m to toggle to menu view, continue navigating your deck, and hit m to return to normal view. Touch devices can double-tap the deck to switch between&nbsp;views.
-    </li>
+<section class="slide">
+  <h2>Generic (and attractive) 404 page</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight="1:*"></code></pre>
+</section>
 
-    <li class="slide" id="extensions-navigation">
-      <strong>deck.navigation</strong>: Adds clickable left and right buttons for the less keyboard&nbsp;inclined.
-    </li>
+<section class="slide">
+  <h2>Apple Touch Icons</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight="2.3.4.5.6:*"></code></pre>
+  <p>Icons for use on iOS and Android</p>
+</section>
 
-    <li class="slide" id="extensions-status">
-      <strong>deck.status</strong>: Adds a page number indicator. (current/total)
+<section class="slide">
+  <h2>Cross Domain XML</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight="7:*"></code></pre>
+  <p>For remote request granting</p>
+</section>
+
+<section class="slide">
+  <h2>Our CSS Directory</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight="8:*"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>A generic favicon</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight="9:*"></code></pre>
+  <p>Favicons are retrieved by browsers and used in bookmarks and the URL bar</p>
+</section>
+
+<section class="slide">
+  <h2>Humans.txt</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight="10:*"></code></pre>
+  <p>Because we're not robots</p>
+</section>
+
+<section class="slide">
+  <h2>Our index</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight="11:*"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Our scripts directory</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight="12:*"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>A basic robots.txt</h2>
+  <pre><code src="code/h5bp-dirlist.txt" data-highlight="13:*"></code></pre>
+  <p>Dictate how search engines can crawl our site</p>
+</section>
+
+<section class="slide">
+  <h2>Original JS Directory</h2>
+  <pre><code src="code/h5bp-origJsDir.txt" data-highlight=""></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Our Preferred JS Structure</h2>
+  <pre><code src="code/h5bp-preferredJsDir.txt" data-highlight=""></code></pre>
+</section>
+
+<section class="slide">
+  <h2><code>main.js</code> vs <code>script.js</code></h2>
+  <pre><code src="code/h5bp-preferredJsDir.txt" data-highlight="main.js"></code></pre>
+  <h3 class="slide center"><code>main.js</code> is a RequireJS convention</h3>
+  <h3 class="slide center">(and it is more meaningful than <code>script.js</code>)</h3>
+</section>
+
+<section class="slide">
+  <h2>The Value of "vendor"</h2>
+  <pre><code src="code/h5bp-preferredJsDir.txt" data-highlight="3:vendor"></code></pre>
+  <h3 class="slide center">Code that is <em>not</em> ours</h3>
+  <h3 class="slide center">Should <em>not</em> be alongside our code</h3>
+</section>
+
+<section class="slide">
+  <h2>Other H5BP Goodness</h2>
+  <h3>Modernizr combined with conditional comments</h3>
+  <pre><code src="code/h5bp-header.txt" data-highlight=""></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Other H5BP Goodness</h2>
+  <h3>Modernizr combined with conditional comments</h3>
+  <pre><code src="code/h5bp-header.txt" data-highlight="2:....!--,4:--...."></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Other H5BP Goodness</h2>
+  <h3>Modernizr combined with conditional comments</h3>
+  <pre><code src="code/h5bp-header.txt" data-highlight="2.4:*"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Other H5BP Goodness</h2>
+  <h3>Modernizr combined with conditional comments</h3>
+  <pre><code src="code/h5bp-header.txt" data-highlight="3:*"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Other H5BP Goodness</h2>
+  <h3>Modernizr combined with conditional comments</h3>
+  <pre><code src="code/h5bp-header.txt" data-highlight="3:lt-ie7"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Other H5BP Goodness</h2>
+  <h3>Modernizr combined with conditional comments</h3>
+  <pre><code src="code/h5bp-header.txt" data-highlight="no-js"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Chrome 19 after modernizer</h2>
+  <pre><code src="code/h5bp-chrome-header.txt" data-highlight="wtf"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Chrome 19 after modernizer</h2>
+  <pre><code src="code/h5bp-chrome-header.txt" data-highlight="2:js"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Chrome 19 after modernizer</h2>
+  <pre><code src="code/h5bp-chrome-header.txt" data-highlight="no-[^ ]*"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>IE8 after modernizer</h2>
+  <pre><code src="code/h5bp-ie8-header.txt" data-highlight="blah"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>IE8 after modernizer</h2>
+  <pre><code src="code/h5bp-ie8-header.txt" data-highlight="2:lt-ie9"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>IE8 after modernizer</h2>
+  <pre><code src="code/h5bp-ie8-header.txt" data-highlight="hashchange,fontface,postmessage,generatedcontent,(local|session)storage"></code></pre>
+</section>
+
+<section class="slide">
+  <h1>Adding to our toolkit...</h1>
+</section>
+
+<section class="slide">
+  <h1><img src="img/lesscss.jpg" class="focus-border"></h1>
+</section>
+
+<section class="slide">
+  <h2 class="center" style="margin-top:200px">Follow along</h2>
+  <h3 class="center"><a href="http://betabong.com/play/liveless/">Live LESS Editor</a></h3>
+  <h3 class="center"><a href="http://betabong.com/play/liveless/">http://betabong.com/play/liveless/</a></h3>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <div class="slide">
+    <h3>Variables!</h3>
+    <pre><code src="code/lesscss-variables.less"></code></pre>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Variables!</h3>
+  <pre><code src="code/lesscss-variables.less" data-highlight="@\w+"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Operations!</h3>
+  <pre><code src="code/lesscss-operations.less"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Operations!</h3>
+  <pre><code src="code/lesscss-operations.less" data-highlight="@baseColor - #0f0,@fontSize \* 1.5"></code></pre>
+  <h4 class="center">(holy crap!)</h4>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Mixins!</h3>
+  <pre><code src="code/lesscss-mixins.less"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Mixins!</h3>
+  <pre><code src="code/lesscss-mixins.less" data-highlight="\.rounded-border"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Parametric Mixins!</h3>
+  <pre><code src="code/lesscss-parametric.less"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Parametric Mixins!</h3>
+  <pre><code src="code/lesscss-parametric.less" data-highlight=".bordered\(.*?\)"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Color Operations!</h3>
+  <pre><code src="code/lesscss-color.less"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Color Operations!</h3>
+  <pre><code src="code/lesscss-color.less" data-highlight="(hue|darken)\(.*?\)"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Nesting!</h3>
+  <pre><code src="code/lesscss-nesting.less"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Nesting!</h3>
+  <pre><code src="code/lesscss-nesting.less" data-highlight="3:span.focus {,4:  color.red;,5:}"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>What does LESS give us?</h2>
+  <h3>Nesting!</h3>
+  <pre><code src="code/lesscss-nesting.less" data-highlight="10:&.visited {,11:  color.darken\(@linkColor.20%\);,12:}"></code></pre>
+</section>
+
+<section class="slide">
+  <h1>And of course...</h1>
+</section>
+<section class="slide">
+  <h1>Single.</h1>
+</section>
+<section class="slide">
+  <h1>Line.</h1>
+</section>
+<section class="slide">
+  <h1>Comments.</h1>
+</section>
+
+<section class="slide">
+  <h2></h2>
+  <pre><code src="code/lesscss-comments.less"></code></pre>
+</section>
+
+<section class="slide">
+  <h2></h2>
+  <pre><code src="code/lesscss-comments.less" data-highlight="//.*"></code></pre>
+</section>
+
+<section class="slide">
+  <h2 class="center"></h2>
+  <pre><code src="code/lesscss-comments.less" data-highlight="11:*"></code></pre>
+  <h2 class="center">Seriously. Wtf, css.</h2>
+</section>
+
+<section class="slide">
+  <h2>Why LESS?</h2>
+  <ul>
+    <li class="slide">
+      <h3>Ease of development</h3>
+      <p>Client side compilation allows us to start using LESS as soon as we decide to.</p>
+      <p>Sass (and others) require pre-compilation to CSS before being useful.</p>
+    </li>
+    <li class="slide">
+      <h3>Does "enough"</h3>
+      <p>CSS is extremely repetitive. LESS evens it out without adding much extra.</p>
+    </li>
+    <li class="slide">
+      <h3>It doesn't matter what you use.</h3>
+      <p>As long as you use <em>something</em>. Sass, and others, are <strong>excellent</strong> but...</p>
+    </li>
+    <li class="slide">
+      <h3>We also wanted LESS for Bootstrap</h3>
+      <p>Make the most out of Bootstrap by embracing LESS.</p>
     </li>
   </ul>
-
-  <p class="slide" id="extension-folders">Each extension folder in the download package contains the necessary JavaScript, CSS, and HTML&nbsp;files. For a complete list of extension modules included in deck.js, check out the&nbsp;<a href="http://imakewebthings.github.com/deck.js/docs">documentation</a>.</p>
 </section>
 
-<section class="slide" id="nested">
-  <h2>Nested Slides</h2>
-  <p>That last slide had a few steps.  To create substeps in slides, just nest them:</p>
-	<pre><code>&lt;section class=&quot;slide&quot;&gt;
-    &lt;h2&gt;Extensions&lt;/h2&gt;
-    &lt;p&gt;Core gives you basic slide functionality...&lt;/p&gt;
-    &lt;ul&gt;
-    &lt;li class=&quot;slide&quot;&gt;
-    &lt;h3&gt;deck.goto&lt;/h3&gt;
-    &lt;p&gt;Adds a shortcut key to jump to any slide number...&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;/section&gt;</code></pre>
+<section class="slide">
+  <h1><img src="img/bootstrap-screenshot.jpg" class="focus-border"></h1>
 </section>
 
-<section class="slide" id="elements-images">
-  <h2>Other Elements: Images</h2>
-  <img src="http://placekitten.com/600/375" alt="Kitties">
-  <pre><code>&lt;img src=&quot;http://placekitten.com/600/375&quot; alt=&quot;Kitties&quot;&gt;</code></pre>
+<section class="slide">
+  <h2>Why use a style framework?</h2>
+  <ul>
+    <li class="slide">
+      <h3>Most web sites follow a similar structure.</h3>
+      <p>Aligned elements, Columns, and Grids.</p>
+    </li>
+    <li class="slide">
+      <h3>Most web sites need similar components.</h3>
+      <p>Buttons, Information Icons, Labels, Notifications...</p>
+    </li>
+  </ul>
+  <h3 class="slide center">Bootstrap is completely customizable.</h3>
+  <h3 class="slide center">You're not adhering to someone else's visual style.</h3>
+  <h3 class="slide center">You're adhering to a structure.</h3>
 </section>
 
-<section class="slide" id="elements-blockquotes">
-  <h2>Other Elements: Blockquotes</h2>
-  <blockquote cite="http://example.org">
-    <p>Food is an important part of a balanced diet.</p>
-    <p><cite>Fran Lebowitz</cite></p>
-  </blockquote>
-	<pre><code>&lt;blockquote cite=&quot;http://example.org&quot;&gt;
-    &lt;p&gt;Food is an important part of a balanced diet.&lt;/p&gt;
-    &lt;p&gt;&lt;cite&gt;Fran Lebowitz&lt;/cite&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;</code></pre>
+<section class="slide">
+  <h2>CSS Grid Systems</h2>
+  <pre><img src="img/bootstrap-gridSystem.jpg"></pre>
 </section>
 
-<section class="slide" id="digging-deeper">
-  <h2>Digging Deeper</h2>
-  <p>If you want to learn about making your own themes, extending deck.js, and more, check out the&nbsp;<a href="../docs/">documentation</a>.</p>
+<section class="slide">
+  <h1>Responsive Web Design</h1>
 </section>
+
+<section class="slide">
+  <h2>Responsiveness baked in</h2>
+  <h4 class="slide center">What will happen if we resize the previous page<br>or view on a mobile device?</h4>
+  <img class="slide center focus-border" src="img/bootstrap-responsive.jpg">
+  <h4 class="slide center">After a certain point, every span becomes its own row.</h4>
+  <h4 class="slide center">(enabled only if you want it)</h4>
+</section>
+
+<section class="slide">
+  <h2>Basic markup</h2>
+  <pre><code src="code/bootstrap-basic.txt"></code></pre>
+</section>
+
+<section class="slide">
+  <h1>Holy Crap!<br>That's not semantic!</h1>
+</section>
+
+<section class="slide">
+  <h1>Who cares?</h1>
+</section>
+
+<section class="slide">
+  <h2>The argument is valid and important,</h2>
+  <h2 class="center">but it's not the only side</h2>
+  <div class="slide">
+    <h3 class="center">In the war of Semantics vs Maintenance and DRY<sup>*</sup></h3>
+    <h3 class="center">Maintenance and DRY will always win</h3>
+    <h5 class="center" style="margin-top:200px"><sup>*</sup>Don't Repeat Yourself</h5>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Markup revisited</h2>
+  <pre><code src="code/bootstrap-basic.txt" data-highlight="row"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Markup revisited</h2>
+  <pre><code src="code/bootstrap-basic.txt" data-highlight="span\d"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Markup revisited</h2>
+  <pre><code src="code/bootstrap-basic.txt" data-highlight="offset\d"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Other Components</h2>
+  <div class="slide">
+    <h2 class="center">Buttons</h2>
+    <pre><code src="code/bootstrap-buttons.txt" data-highlight="btn(-\w*)?"></code></pre>
+    <img src="img/bootstrap-buttons.jpg" class="center focus-border">
+    <div class="slide">
+      <h3 class="center">Also usable on other elements</h3>
+      <pre><code src="code/bootstrap-buttons2.txt" data-highlight="1:a(?= ),2:span(?= )"></code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Alerts</h2>
+  <div class="slide">
+    <pre><code src="code/bootstrap-alerts.txt" data-highlight="alert(-\w*)?"></code></pre>
+    <img src="img/bootstrap-alertSuccess.jpg" class="center focus-border">
+    <img src="img/bootstrap-alerts.jpg" class="slide center focus-border">
+  </div>
+</section>
+
+<section class="slide">
+  <h2>And <em>loads</em> more</h2>
+  <div class="slide">
+    <h3>and not just CSS, jQuery plugins like</h3>
+    <ul>
+      <li class="slide"><h3>Modal Popups</h3></li>
+      <li class="slide"><h3>Tooltips</h3></li>
+      <li class="slide"><h3>Typeahead (autocomplete)</h3></li>
+      <li class="slide"><h3>Popovers</h3></li>
+      <li class="slide"><h3>Tabs</h3></li>
+      <li class="slide"><h3>And more...</h3></li>
+    </ul>
+  </div>
+</section>
+
+<section class="slide">
+  <h1>Bootstrap and LESS</h1>
+</section>
+
+<section class="slide">
+  <h2>Bootstrap is written in LESS</h2>
+  <pre class="slide"><code src="code/bootstrap-lessDir.txt" data-highlight=""></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Bootstrap is written in LESS</h2>
+  <pre class=""><code src="code/bootstrap-lessDir2.txt" data-highlight="variables.less"></code></pre>
+</section>
+
+<section class="slide">
+  <h2><code>variables.less</code></h2>
+  <pre class=""><code src="code/bootstrap-variables.less" data-highlight=""></code></pre>
+</section>
+
+<section class="slide">
+  <h2><code>variables.less</code></h2>
+  <pre class=""><code src="code/bootstrap-variables2.less" data-highlight=""></code></pre>
+</section>
+
+<section class="slide">
+  <h1>Putting the <em>JavaScript</em><br>in <em>JavaScript</em>U</h1>
+</section>
+
+<section class="slide">
+  <h1>RequireJS</h1>
+</section>
+
+<section class="slide">
+  <h1><img src="img/requirejs-ss.jpg" class="focus-border"></h1>
+</section>
+
+<section class="slide">
+  <h1>AMD?</h1>
+</section>
+
+<section class="slide">
+  <h2>Asynchronous Module Definition</h2>
+  <blockquote style="font-size:40px">The Asynchronous Module Definition (AMD) API specifies a mechanism for defining modules such that the module and its dependencies can be asynchronously loaded. </blockquote>
+  <h3 class="slide center">AMD is <em><strong>not</strong></em> a library.</h3>
+  <h3 class="slide center">AMD is a specification.</h3>
+</section>
+
+<section class="slide">
+  <h2><code>define()</code></h2>
+  <blockquote style="font-size:40px">The specification defines a single function "define" that is available as a free variable or a global variable.</blockquote>
+  <pre class="slide"><code>define(id?, dependencies?, factory);</code></pre>
+  <div class="slide">
+    <p></p>
+    <p>Using an ID is not recommended unless necessary.</p>
+    <pre><code>define(dependencies?, factory);</code></pre>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Why AMD?</h2>
+  <ul>
+    <li class="slide">
+      <h3>Dependency Management</h3>
+      <p>Large applications can easily become very unwieldy with manually managed dependencies.</p>
+    </li>
+    <li class="slide">
+      <h3>Encourages reusable code</h3>
+      <p>Easily define and use separate modules.</p>
+    </li>
+    <li class="slide">
+      <h3>Extremely easy to get started with</h3>
+      <p>Extends the module pattern you already know (and love).</p>
+    </li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Your new html</h2>
+  <pre><code src="code/require-html.js"></code></pre>
+</section>
+
+<section class="slide">
+  <h2><code>require.js</code></h2>
+  <pre><code src="code/require-html.js" data-highlight="js/vendor/require.js"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Your entry point</h2>
+  <pre><code src="code/require-html.js" data-highlight="js/main"></code></pre>
+</section>
+
+<section class="slide">
+  <h2><code>main.js</code></h2>
+  <pre><code src="code/require-main.js"></code></pre>
+</section>
+
+<section class="slide">
+  <h2><code>require.config</code></h2>
+  <pre><code src="code/require-main.js" data-highlight="" data-focus="1:{,2.3.4:*,5:}"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Path mappings</h2>
+  <pre><code src="code/require-main.js" data-highlight="paths"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Path mappings</h2>
+  <pre><code src="code/require-main.js" data-highlight="3:jquery(?= ),vendor/jquery-1.7.1.min"></code></pre>
+</section>
+
+<section class="slide">
+  <h2><code>require()</code></h2>
+  <pre><code src="code/require-main.js" data-highlight="7:require\(,9:\)"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Our dependencies</h2>
+  <pre><code src="code/require-main.js" data-highlight="7:jquery,\$(?=\))"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Our dependencies</h2>
+  <pre><code src="code/require-main.js" data-highlight="8:\$\('\w+'\)"></code></pre>
+</section>
+
+<section class="slide">
+  <h2><code>define()</code></h2>
+  <pre><code src="code/require-defineSpec.js" data-highlight=""></code></pre>
+</section>
+
+<section class="slide">
+  <h2><code>fiveCount.js</code></h2>
+  <pre><code src="code/require-define.js" data-highlight=""></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Pre-AMD example</h2>
+  <pre><code src="code/require-definePreAMD.js" data-highlight="1:var fiveCount = \(,16:\)\(\)"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Usage of modules</h2>
+  <pre><code src="code/require-depUsage.js" data-highlight="1:fiveCount"></code></pre>
+</section>
+
+<section class="slide">
+  <h2 class="center">Asynchronous script loading</h2>
+  <h2 class="slide center">Great for development</h2>
+  <h2 class="slide center">Can be <em>expensive</em> in production</h2>
+</section>
+
+<section class="slide">
+  <h2>Enter <code>r.js</code></h2>
+  <div class="slide">
+    <h3>Run the RequireJS optimizer on the command line</h3>
+    <pre><code>node r.js main.js</code></pre>
+  </div>
+  <h4 class="slide">Locates and combines all dependencies, in proper order</h4>
+  <h4 class="slide">Minifies/Uglifies <em>all</em> your code</h4>
+  <h4 class="slide">Allows plugins to perform pre-loading work</h4>
+  <h4 class="slide">Minifies all your css for good measure</h4>
+</section>
+
+<section class="slide">
+  <h1>AMD <em>is</em> different</h1>
+</section>
+
+<section class="slide">
+  <h2>This ain't your mother's JavaScript</h2>
+  <ul>
+    <li class="slide">
+      <h3>In your world, everything is unicorns and rainbows</h3>
+      <p>New code written adhering to AMD is beautiful and made of cotton candy.</p>
+    </li>
+    <li class="slide">
+      <h3>Other people's code requires care</h3>
+      <p>A lot of existing modules don't expect to be loaded asynchronously.</p>
+      <p>Most other code expects access to existing global variables, or needs to create their own.</p>
+    </li>
+    <li class="slide">
+      <h3>Everything is usable, but understanding the differences is important</h3>
+      <p>Libraries that support AMD often still support non-AMD, global access for compatibility.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>Rounding Out Our Foundation</h1>
+</section>
+
+<section class="slide">
+  <h1><img src="img/jasmine-ss.jpg" class="focus-border"></h1>
+</section>
+
+<section class="slide">
+  <h2>How Do You Test?</h2>
+  <h3 class="slide">You could do it one way:</h3>
+  <ol>
+    <li class="slide">
+      <p>Write some code you know should probably produce a "4" or something similar.</p>
+    </li>
+    <li class="slide">
+      <p>Go to your browser, refresh, verify that you see a "4".</p>
+    </li>
+    <li class="slide">
+      <p>Success? - Move on. Failure? Go back to 1.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h1>Drawbacks to this approach?</h1>
+</section>
+
+<section class="slide">
+  <h2>Drawbacks.</h2>
+  <ul>
+    <li class="slide">
+      <h3>Slow</h3>
+      <p>You have to manually test every time.</p>
+    </li>
+    <li class="slide">
+      <h3>Unscalable</h3>
+      <p>You really can't test anything except what you are currently working on at any given time.</p>
+    </li>
+    <li class="slide">
+      <h3>A complete waste</h3>
+      <p>Every second you manually test is a second gone. You can't reuse your efforts.</p>
+      <p>Your a programmer. Have some respect.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Automated Testing</h2>
+  <h3 class="slide">Instead of the previous method:</h3>
+  <ol>
+    <li class="slide">
+      <p>Write a test to verify some code produces a "4".</p>
+    </li>
+    <li class="slide">
+      <p>Write some code you know should probably produce a "4".</p>
+    </li>
+    <li class="slide">
+      <p>Run your test.</p>
+    </li>
+    <li class="slide">
+      <p>Success? - Move on. Failure? Go back to 2.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h1>Benefits?</h1>
+</section>
+
+<section class="slide">
+  <h2>Benefits.</h2>
+  <ul>
+    <li class="slide">
+      <h3>Grow your tests over time</h3>
+      <p>Ideally, every line of code can eventually be tested automatically.</p>
+    </li>
+    <li class="slide">
+      <h3>Your tests keep testing</h3>
+      <p>Other developers can run your tests to determine if they are breaking anything.</p>
+    </li>
+    <li class="slide">
+      <h3>It forces you to write against your API earlier</h3>
+      <p>You start using your code well before it is producing the final product.</p>
+      <p>This <em>will</em> expose bugs earlier, allow you to question design choices earlier, and keeps your logic
+        in testable chunks.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Using Jasmine</h2>
+  <pre><code src="code/jasmine-tests.js"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Test Specs</h2>
+  <pre><code src="code/jasmine-tests.js" data-highlight="it"></code></pre>
+  <p>A spec is a function that runs any number of tests.</p>
+</section>
+
+<section class="slide">
+  <h2>Test Suites</h2>
+  <pre><code src="code/jasmine-tests.js" data-highlight="describe"></code></pre>
+  <p>A test suite comprises of any number of specs, along with setup/teardown methods.</p>
+</section>
+
+<section class="slide">
+  <h2>Setup / Teardown</h2>
+  <pre><code src="code/jasmine-tests.js" data-highlight="beforeEach"></code></pre>
+  <p>With <code>beforeEach</code> and <code>afterEach</code>, you can set up a fresh environment before every spec.</p>
+</section>
+
+<section class="slide">
+  <h2>Matchers</h2>
+  <pre><code src="code/jasmine-tests.js" data-highlight="expect,toEqual"></code></pre>
+  <p>The individual tests that verify your code is working.</p>
+</section>
+
+<section class="slide">
+  <h2>Matchers</h2>
+  <pre><code src="code/jasmine-matchers.js" data-highlight=""></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Custom Matchers</h2>
+  <pre><code src="code/jasmine-customMatchers.js" data-highlight=""></code></pre>
+  <pre class="slide"><code>expect(allDogs).toGoToHeaven();</code></pre>
+</section>
+
+<section class="slide">
+  <h2>RequireJS and Jasmine</h2>
+  <pre><code src="code/jasmine-require.txt"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>RequireJS and Jasmine</h2>
+  <pre><code src="code/jasmine-require.txt" data-highlight="require"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>RequireJS and Jasmine</h2>
+  <pre><code src="code/jasmine-require.js"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>RequireJS and Jasmine</h2>
+  <pre><code src="code/jasmine-require.js" data-highlight="require"></code></pre>
+</section>
+
+<section class="slide">
+  <h1>Congratulations!</h1>
+</section>
+
+<section class="slide">
+  <h2>Our base is done</h2>
+  <ul>
+    <li class="slide">
+      <h3>Useful for a wide range of apps</h3>
+      <p>Unit tests, RequireJS, LESS, and the rest are all useful for just about anything you can think of.</p>
+      <p>We will add to our toolkit, but most other libraries will depend on the situation.</p>
+      <p>Our base, though, can be reused over and over.</p>
+    </li>
+  </ul>
+  <div class="slide">
+    <h3 class="center">Get it here</h3>
+    <h4 class="center"><a href="https://github.com/javascriptu/webapp-foundation">github.com/javascriptu/webapp-foundation</a></h4>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Where to go from here?</h2>
+  <ul>
+    <li>
+      <h3>Fork the repo</h3>
+      <p>Get it running locally.</p>
+    </li>
+    <li>
+      <h3>Step through the creation</h3>
+      <p>If you haven't already, checkout the workshop source and see how we incorporate each piece, step by step.</p>
+    </li>
+    <li>
+      <h3>Read (or at least skim) documentation</h3>
+      <p>Look into LESS, jQuery, and Bootstrap. Play with using RequireJS. Write some tests.</p>
+    </li>
+    <li>
+      <h3>Register for the next workshop!</h3>
+      <p><a href="http://www.javascriptu.org/">www.javascriptu.org</a></p>
+    </li>
+  </ul>
+</section>
+
 
 
 <!-- ---------------------------------------------------------- -->

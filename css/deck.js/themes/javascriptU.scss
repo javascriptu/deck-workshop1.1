@@ -31,8 +31,21 @@ body {
   border:1px solid red;
 }
 
+.focus-border {
+  border-radius:25px;
+  box-shadow:0 0 10px 2px hsl(183, 74%, 77%);
+}
+
+.center {
+  text-align:center;
+}
+
+p {
+  padding:0 1em !important;
+}
+
 .deck-container {
-  font-family : "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+//  font-family : "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-size   : 1.75em;
   color       : $textColor;
   width       : 1024px;
@@ -45,6 +58,7 @@ body {
 
   > .slide {
     padding:0 !important;
+
 
     .deck-before, .deck-previous {
       opacity : 0.4;
@@ -64,6 +78,16 @@ body {
   .slide {
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Mate SC', serif;
+//      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-variant:small-caps;
+      code {
+        font-variant: normal;
+        font-weight:normal;
+      }
+    }
+
+    h4 {
+      font-variant:normal;
     }
 
     h1 {
@@ -135,6 +159,9 @@ body {
           @include box-shadow(1px, 1px, 2px, 0px, #000);
           padding:0px 6px 2px;
 
+        }
+        .focus {
+          color: hsl(0, 100%, 35%);
         }
       }
     }

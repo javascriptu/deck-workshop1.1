@@ -1,0 +1,12 @@
+.bordered(@width: 1px, @radius: 5px) {
+  border-radius: @radius;
+  border: @width solid black;
+}
+
+p {
+  .bordered();
+}
+
+p.focused {
+  .bordered(3px);
+}

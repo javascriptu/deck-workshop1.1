@@ -1,0 +1,11 @@
+<html class="
+  js flexbox canvas canvastext webgl no-touch
+  geolocation postmessage websqldatabase indexeddb
+  hashchange history draganddrop websockets rgba hsla
+  multiplebgs backgroundsize borderimage borderradius
+  boxshadow textshadow opacity cssanimations csscolumns
+  cssgradients cssreflections csstransforms video audio
+  csstransforms3d csstransitions fontface inlinesvg smil
+  generatedcontent localstorage sessionstorage
+  webworkers applicationcache svg svgclippaths
+" lang="en">

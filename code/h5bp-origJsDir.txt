@@ -1,0 +1,6 @@
+js
+|__libs
+| |__jquery-1.7.1.min.js
+| |__modernizr-2.5.3.min.js
+|__plugins.js
+|__script.js
